@@ -1,0 +1,74 @@
+/* Container for the entire login page */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #E0E0E0;
+    padding: 20px;
+}
+
+/* Form container */
+.auth-form {
+    background-color: #1E2A47;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Input fields container */
+.input-container {
+    margin-bottom: 1rem;
+}
+
+/* Input styles */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #BB86FC;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin-top: 5px;
+}
+
+/* Submit button */
+.submit-button {
+    background-color: #BB86FC;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-button:disabled {
+    background-color: #3E4A85;
+    cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    margin-top: 1rem;
+}
+
+/* Links */
+.link-text {
+    color: #BB86FC;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.reset-password,
+.switch-auth,
+.reset-link {
+    margin-top: 1rem;
+}

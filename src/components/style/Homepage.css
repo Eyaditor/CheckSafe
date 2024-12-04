@@ -1,0 +1,101 @@
+/* Container for the home page */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #1F1B24;
+    /* Dark mode background */
+    color: #E0E0E0;
+    /* Light text color */
+    padding: 20px;
+}
+
+/* Large search input field */
+.home-page input {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    background-color: #1E2A47;
+    border: 2px solid #BB86FC;
+    border-radius: 5px;
+    color: #E0E0E0;
+    transition: border-color 0.3s ease;
+}
+
+.home-page input:focus {
+    border-color: #03DAC6;
+    outline: none;
+}
+
+/* Large search button */
+.home-page button {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    background-color: #6200EE;
+    /* Purple button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-page button:hover {
+    background-color: #3700B3;
+}
+
+/* Loading and error message styling */
+.home-page p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Scan results styling */
+.home-page .results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.home-page .results h4 {
+    color: #03DAC6;
+    /* Light cyan color */
+}
+
+.home-page .results p {
+    font-size: 1.1rem;
+}
+
+/* Styling for the card containing the results */
+.home-page .results {
+    display: flex;
+    align-items: center;
+    background-color: #1E2A47;
+    /* Card background color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Result text and details */
+.home-page .results .text {
+    flex-grow: 1;
+    margin-right: 20px;
+    color: #E0E0E0;
+}
+
+/* Image styling to make it smaller */
+.home-page .results img {
+    width: 50px;
+    /* Smaller image */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

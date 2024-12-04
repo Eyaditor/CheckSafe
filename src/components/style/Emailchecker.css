@@ -1,0 +1,74 @@
+/* General Container */
+.email-check-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #1F1B24;
+    color: #E0E0E0;
+    min-height: 100vh;
+}
+
+/* Input Styling */
+.email-input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #BB86FC;
+    border-radius: 5px;
+    width: 250px;
+    background-color: #1E2A47;
+    color: #E0E0E0;
+}
+
+/* Button Styling */
+.check-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #BB86FC;
+    color: #1F1B24;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-button:disabled {
+    background-color: #3E4A85;
+    cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+/* Breaches Container */
+.breaches-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.breaches-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Breach item styling */
+.breaches-list li {
+    margin: 5px 0;
+    background-color: #1E2A47;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #E0E0E0;
+}
+
+/* Styling for the checking/loading state */
+.check-button[disabled] {
+    background-color: #3E4A85;
+    cursor: not-allowed;
+}

@@ -1,0 +1,121 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1E2A47;
+    /* Dark blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+    color: #BB86FC;
+    /* Accent color for the heading */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    color: #E0E0E0;
+    /* Light color for user details */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Loading and error message styles */
+.dashboard .loading,
+.dashboard .error {
+    color: #F44336;
+    /* Red color for error */
+    font-size: 1.1rem;
+}
+
+/* Section heading for Link Scans and Email Checks */
+.dashboard h2 {
+    color: #03DAC6;
+    /* Light cyan for subheadings */
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+/* Scan results list styling */
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashboard ul li {
+    background-color: #1F1B24;
+    /* Dark background for each scan item */
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    /* Fixed width for each item */
+    box-sizing: border-box;
+    color: #E0E0E0;
+    /* Light text color */
+    text-align: left;
+}
+
+.dashboard ul li strong {
+    color: #BB86FC;
+    /* Accent color for labels */
+}
+
+.dashboard ul li ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.dashboard ul li ul li {
+    font-size: 0.9rem;
+    color: #03DAC6;
+    /* Light cyan for breach items */
+}
+
+/* Logout button */
+.dashboard .logout-button {
+    background-color: #6200EE;
+    /* Purple button */
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.dashboard .logout-button:hover {
+    background-color: #3700B3;
+    /* Darker purple on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .dashboard {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .dashboard h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard ul li {
+        width: 100%;
+    }
+
+    .dashboard ul {
+        flex-direction: column;
+    }
+
+    .dashboard .logout-button {
+        width: 100%;
+    }
+}

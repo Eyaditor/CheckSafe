@@ -1,0 +1,67 @@
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #1F1B24;
+    color: #E0E0E0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Input textarea */
+.chat-input {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #BB86FC;
+    width: 100%;
+    max-width: 500px;
+    background-color: #1E2A47;
+    color: #E0E0E0;
+    resize: none;
+}
+
+/* Send button */
+.send-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #BB86FC;
+    color: #1F1B24;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-button:disabled {
+    background-color: #3E4A85;
+    cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Response container */
+.response-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1E2A47;
+    color: #E0E0E0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Styling for loading state */
+.send-button[disabled] {
+    background-color: #3E4A85;
+    cursor: not-allowed;
+}

@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1F1B24;
+  /* Dark background */
+}
+
+/* Full height for the root */
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1F1B24;
+  /* Dark background */
+}
+
+/* Optional: Set default padding/margin and box-sizing for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  background-color: #1F1B24;
+  /* Dark mode background */
+  color: #E0E0E0;
+  /* Light text color */
+  font-family: 'Arial', sans-serif;
+}
