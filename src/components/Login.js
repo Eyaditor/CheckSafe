@@ -13,27 +13,36 @@ export default function Login() {
     const { login, signup, resetPassword } = useAuth();
     const navigate = useNavigate();
 
+    const clearForm = () => {
+        setEmail('');
+        setPassword('');
+        setName('');
+        setError('');
+    };
+
     async function handleSubmit(e) {
         e.preventDefault();
+        setError(''); // Clear previous errors
         if (isReset) {
             try {
                 await resetPassword(email);
                 alert('Password reset email sent. Please check your inbox.');
                 setIsReset(false);
+                clearForm();
             } catch (error) {
-                setError('Failed to reset password. Make sure the email is correct.');
+                setError('Failed to reset password. Please check the email address.');
             }
         } else {
             try {
                 if (isLogin) {
                     await login(email, password);
-                    navigate('/dashboard');
                 } else {
                     await signup(email, password, name);
-                    navigate('/dashboard');
                 }
+                clearForm();
+                navigate('/dashboard');
             } catch (error) {
-                setError('Failed to ' + (isLogin ? 'login' : 'register'));
+                setError(`Failed to ${isLogin ? 'login' : 'register'}. ${error.message}`);
             }
         }
     }

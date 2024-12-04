@@ -5,7 +5,8 @@ import {
     signInWithEmailAndPassword,
     signOut,
     onAuthStateChanged,
-    sendPasswordResetEmail
+    sendPasswordResetEmail,
+    updateProfile
 } from 'firebase/auth';
 
 const AuthContext = createContext();
@@ -21,41 +22,62 @@ export function AuthProvider({ children }) {
             setUser(user);
             setLoading(false);
         });
-        return unsubscribe;
+
+        return unsubscribe; // Cleanup subscription on component unmount
     }, []);
 
-    const signup = (email, password, name) => {
-        return createUserWithEmailAndPassword(auth, email, password)
-            .then(userCredential => {
-                const user = userCredential.user;
-                return user.updateProfile({ displayName: name });
-            });
+    const signup = async (email, password, name) => {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+            await updateProfile(user, { displayName: name });
+            setUser({ ...user, displayName: name }); // Update local state with the name
+            return user;
+        } catch (error) {
+            console.error("Error during signup:", error.message);
+            throw error; // Rethrow to handle it at the component level
+        }
     };
 
-    const login = (email, password) => {
-        return signInWithEmailAndPassword(auth, email, password);
+    const login = async (email, password) => {
+        try {
+            return await signInWithEmailAndPassword(auth, email, password);
+        } catch (error) {
+            console.error("Error during login:", error.message);
+            throw error;
+        }
     };
 
-    const logout = () => {
-        return signOut(auth);
+    const logout = async () => {
+        try {
+            await signOut(auth);
+            setUser(null);
+        } catch (error) {
+            console.error("Error during logout:", error.message);
+            throw error;
+        }
     };
 
-    const resetPassword = (email) => {
-        return sendPasswordResetEmail(auth, email);
+    const resetPassword = async (email) => {
+        try {
+            await sendPasswordResetEmail(auth, email);
+        } catch (error) {
+            console.error("Error during password reset:", error.message);
+            throw error;
+        }
     };
-
 
     const value = {
         user,
         signup,
         login,
         logout,
-        resetPassword
+        resetPassword,
     };
 
     return (
         <AuthContext.Provider value={value}>
-            {!loading && children}
+            {!loading ? children : <p>Loading...</p>}
         </AuthContext.Provider>
     );
 }

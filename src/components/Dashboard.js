@@ -121,7 +121,7 @@ export default function Dashboard() {
                     )}
                 </>
             )}
-            <button class="logout-button" onClick={handleLogout} style={{ marginTop: '20px' }}>
+            <button className="logout-button" onClick={handleLogout} style={{ marginTop: '20px' }}>
                 Logout
             </button>
         </div>
