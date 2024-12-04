@@ -6,6 +6,10 @@
     2- check if email informations have been leaked in a data breach
     3- chat with opan ai chatgpt
 
+### the use of AI
+AI was used mainly in the fronend. it was used to generate css that we later changed to match our vision, also it was used to help with debugging and to fix random errors all throughout the project, also it helped with setting up the connection with firebase and firestore and fixed some bugs.
+The AI used was openAI Chatgpt 4o.
+
 ### Here is a simple image with the app structure:
 <img src="assets/structure.png" style="transform: scale(0.8);">
 
